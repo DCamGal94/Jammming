@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 import Playlist from "../Playlist/Playlist";
@@ -8,6 +8,12 @@ import SearchResults from "../SearchResults/SearchResults";
 import Spotify from "../../util/Spotify";
 
 const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  
+
   return (
     <div>
       <h1>
@@ -15,7 +21,12 @@ const App = () => {
       </h1>
       <div className="App">
         <SearchBar />
-        <header className="App-header">
+        <div className="App-playlist">
+          <SearchResults />
+          <Playlist />
+        </div>
+        {/* Original render elements from npm start command are commented below for reference: */}
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/components/App.js</code> and save to reload.
@@ -28,7 +39,7 @@ const App = () => {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
       </div>
     </div>
   );
