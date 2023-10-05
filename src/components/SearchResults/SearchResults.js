@@ -1,12 +1,13 @@
 import React from "react";
 import "./SearchResults.css";
-import Tracklist from "../Tracklist/Tracklist";
+import TrackList from "../Tracklist/TrackList";
 
+// This is a React function component!
 const SearchResults = (props) => {
     return (
         <div className="SearchResults">
             <h2>Results</h2>
-            <Tracklist tracks={props.SearchResults} onAdd={props.onAdd} />
+            <TrackList tracks={props.SearchResults} onAdd={props.onAdd} /> {/* This uses the 'TrackList' React Function Component. */}
         </div>
     );
 };

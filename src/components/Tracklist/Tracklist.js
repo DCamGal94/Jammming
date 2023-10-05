@@ -1,10 +1,11 @@
 import React from "react";
-import "./Tracklist.css";
+import "./TrackList.css";
 import Track from "../Track/Track";
 
-const Tracklist = (props) => {
+// This is a React function component!
+const TrackList = (props) => {
     return (
-        <div className="Tracklist">
+        <div className="TrackList">
             {props.track?.map((track) => {
                 return (
                     <Track 
@@ -12,12 +13,12 @@ const Tracklist = (props) => {
                         key={track.id}
                         onAdd={props.onAdd}
                         isRemoval={props.isRemoval}
-                        onRemove={props.onRemove}
-                    />
+                        onRemove={props.onRemove} 
+                    /> // This uses the Track React Function Component.
                 );
             })}
         </div>
     );
 };
 
-export default Tracklist;
+export default TrackList;

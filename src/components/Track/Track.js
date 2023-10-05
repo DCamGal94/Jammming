@@ -1,20 +1,17 @@
 import React, { useCallback } from "react";
 import "./Track.css";
 
+// This is a React function component!
 const Track = (props) => {
     const addTrack = useCallback (
         (event) => {
             props.onAdd(props.track);
-        },
-        [props.onAdd, props.track]
-    );
+        }, [props.onAdd, props.track]);
 
     const removeTrack = useCallback (
         (event) => {
             props.onRemove(props.track);
-        },
-        [props.onRemove, props.track]
-    );
+        }, [props.onRemove, props.track]);
 
     const renderAction = () => {
         if (props.isRemoval) {
@@ -23,8 +20,7 @@ const Track = (props) => {
                     -
                 </button>
             );
-        }
-        return (
+        } return (
             <button className="Track-action" onClick={addTrack}>
                 +
             </button>
