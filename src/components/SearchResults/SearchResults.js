@@ -1,6 +1,6 @@
 import React from "react";
 import "./SearchResults.css";
-import TrackList from "../Tracklist/TrackList";
+import TrackList from "../TrackList/TrackList";
 
 // This is a React function component!
 const SearchResults = (props) => {

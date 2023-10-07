@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
-import "./Playlist.css"
-import TrackList from "../Tracklist/TrackList";
+import "./Playlist.css";
+import TrackList from "../TrackList/TrackList";
 
 // This is a React function component!
 // To make sure that a function component can use the props object, 
@@ -10,8 +10,8 @@ const Playlist = (props) => {
     // It is especially common to pass event handler functions.
     // However, we have to define an event handler before we can pass one anywhere.
     // This (handleNameChange) is an event handler function that uses the React Hook [useCallback()](https://react.dev/reference/react/useCallback)!
-    const handleNameChange = useCallback ( // useCallback is a React Hook that lets you cache a function definition between re-renders.
-        (event) => {
+    // useCallback is a React Hook that lets you cache a function definition between re-renders.
+    const handleNameChange = useCallback((event) => {
             props.onNameChange(event.target.value);
         }, [props.onNameChange]);  // This second argument is called the dependency array.
         // The dependency array is used to tell the method when to call our effect and when to skip it. 
