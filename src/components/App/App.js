@@ -71,32 +71,17 @@ const App = () => {
         Ja<span className="highlight">mmm</span>ing
       </h1>
       <div className="App">
-        <SearchBar onSearch={search} /> {/* This uses the SearchBar React Function Component. */}
+        <SearchBar onSearch={search} /> 
         <div className="App-playlist">
-          <SearchResults searchResults={searchResults} onAdd={addTrack} /> {/* This uses the SearchResults React Function Component. */}
+          <SearchResults searchResults={searchResults} onAdd={addTrack} />
           <Playlist
             playlistName={playlistName}
             playlistTracks={playlistTracks}
             onNameChange={updatePlaylistName}
             onRemove={removeTrack}
             onSave={savePlaylist}
-          /> {/* This uses the Playlist React Function Component. */}
+          />
         </div>
-        {/* Original render elements from npm start command are commented below for reference: */}
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/components/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
       </div>
     </div>
   );
